@@ -73,7 +73,7 @@ curl -X POST http://localhost:3000/auth/signup \
   -d '{
     "email": "user@example.com",
     "username": "testuser",
-    "password": "password123"
+    "password": <STRONG_PASSWORD>
   }'
 ```
 
@@ -83,7 +83,7 @@ curl -X POST http://localhost:3000/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "user@example.com",
-    "password": "password123"
+    "password": <STRONG_PASSWORD>
   }'
 ```
 **Response:** `{ "access_token": "jwt_token_here" }`
