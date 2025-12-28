@@ -17,7 +17,7 @@
 
 ```bash
 # Create database user and database
-sudo -u postgres psql -c "CREATE USER auth_user WITH PASSWORD 'password123';"
+sudo -u postgres psql -c "CREATE USER auth_user WITH PASSWORD <STRONG_PASSWORD>;"
 sudo -u postgres psql -c "CREATE DATABASE auth_db OWNER auth_user;"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE auth_db TO auth_user;"
 ```
@@ -30,7 +30,7 @@ cat > /home/lenovo/Documents/Project/auth-backend/.env << 'EOF'
 DB_HOST=localhost
 DB_PORT=5432
 DB_USERNAME=auth_user
-DB_PASSWORD=password123
+DB_PASSWORD=<STRONG_PASSWORD>
 DB_NAME=auth_db
 
 # JWT
